@@ -14,7 +14,7 @@ set $NB #222222
 set $NF #FFFFFF
 set $FB #0088EE
 set $FF #FFFFFF
-set $UB #900000
+set $UB #FFDD00
 set $UF #FFFFFF
 # Workspaces
 set $WS1 1:mail
