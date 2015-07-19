@@ -1,0 +1,135 @@
+### i3 v4 Configuration File
+###
+### You'll also need to install i3pystatus and
+### required python modules, as well as
+### dmenu-xft-height for this to run properly.
+###
+### Author: Nicolas Hafner <shinmera@tymoon.eu>
+
+## Variables
+set $MOD Mod1
+set $FONT Consolas
+# Colors
+set $NB #222222
+set $NF #FFFFFF
+set $FB #0088EE
+set $FF #FFFFFF
+set $UB #900000
+set $UF #FFFFFF
+# Workspaces
+set $WS1 1:mail
+set $WS2 2:www
+set $WS3 3:dev
+set $WS4 4:bkg
+set $WS5 5:ext
+set $EXT1 ext1
+set $EXT2 ext2
+set $EXT3 ext3
+
+## Focus
+bindsym $MOD+Tab focus right
+focus_follows_mouse no
+
+## Layouts
+bindsym $MOD+Ctrl+h split h
+bindsym $MOD+Ctrl+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $MOD+Ctrl+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $MOD+s layout stacking
+#bindsym $MOD+w layout tabbed
+#bindsym $MOD+e layout toggle split
+
+# toggle tiling / floating
+bindsym $MOD+f floating toggle
+
+# change focus between tiling / floating windows
+#bindsym $MOD+space focus mode_toggle
+
+## Workspaces
+# Assign workspaces
+workspace $WS1 output eDP1
+workspace $WS2 output eDP1
+workspace $WS3 output eDP1
+workspace $WS4 output eDP1
+workspace $WS5 output eDP1
+workspace $EXT1 output HDMI1
+workspace $EXT2 output HDMI2
+workspace $EXT3 output DP1
+
+# switch to workspace
+bindsym $MOD+Ctrl+1 workspace $WS1
+bindsym $MOD+Ctrl+2 workspace $WS2
+bindsym $MOD+Ctrl+3 workspace $WS3
+bindsym $MOD+Ctrl+4 workspace $WS4
+bindsym $MOD+Ctrl+5 workspace $WS5
+bindsym $MOD+Ctrl+Left workspace prev
+bindsym $MOD+Ctrl+Right workspace next
+
+# move focused container to workspace
+bindsym $MOD+Shift+1 move container to workspace $WS1
+bindsym $MOD+Shift+2 move container to workspace $WS2
+bindsym $MOD+Shift+3 move container to workspace $WS3
+bindsym $MOD+Shift+4 move container to workspace $WS4
+bindsym $MOD+Shift+5 move container to workspace $WS5
+bindsym $MOD+Shift+Left workspace prev
+bindsym $MOD+Shift+Right workspace next
+
+## Application preferences
+assign [class="Thunderbird"] $WS1
+assign [class="Opera"] $WS2
+assign [class="Emacs"] $WS3
+assign [class="pavucontrol"] $WS5
+assign [class="smplayer"] $WS5
+assign [class="vmware"] $WS5
+for_window [class="wine"] border none
+
+## Colors
+# class                 border background text indicator
+client.focused          $FB $FB $FF #2e9ef4
+client.focused_inactive $NB $NB $NF #484e50
+client.unfocused        $NB $NB $NF #292d2e
+client.urgent           $UB $UB $UF #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000
+
+## i3 Internals
+# Font
+font pango:$FONT 10
+# Float
+floating_modifier $MOD
+# Terminal
+bindsym $MOD+Return exec i3-sensible-terminal
+# File Browser
+bindsym $MOD+d exec dolphin
+# Launcher
+bindsym $MOD+r exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
+# Kill windows
+bindsym $MOD+Escape kill
+# Reload config
+bindsym $MOD+Ctrl+c reload
+# Restart i3
+bindsym $MOD+Ctrl+r restart
+# Exit i3
+bindsym $MOD+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+## i3bar
+bar {
+  status_command python ~/.config/i3/status.py
+  position top
+  strip_workspace_numbers yes
+  separator_symbol "•"
+  colors {
+    background $NB
+    statusline $NF
+    separator $FB
+    focused_workspace  $FB $FB $FF
+    active_workspace   $NB $NB $NF
+    inactive_workspace $NB $NB $NF
+    urgent_workspace   $UB $UB $UF
+  }
+}
+
+## Startup
+exec --no-startup-id bash ~/.config/i3/startup.sh
