@@ -10,6 +10,7 @@ function start {
 nitrogen --restore
 start clipit
 start uim-toolbar-gtk3-systray
+start twmnd
 
 ## X settings
 xset s off
