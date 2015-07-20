@@ -27,7 +27,7 @@ set $EXT2 ext2
 set $EXT3 ext3
 
 ## Focus
-bindsym $MOD+Tab focus right
+bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
 focus_follows_mouse no
 
 ## Layouts
