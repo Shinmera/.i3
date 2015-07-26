@@ -31,16 +31,20 @@ bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
 focus_follows_mouse no
 
 ## Layouts
-bindsym $MOD+Ctrl+h split h
-bindsym $MOD+Ctrl+v split v
+bindsym $MOD+Shift+h split h
+bindsym $MOD+Shift+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $MOD+Ctrl+f fullscreen toggle
+bindsym $MOD+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $MOD+s layout stacking
-#bindsym $MOD+w layout tabbed
-#bindsym $MOD+e layout toggle split
+bindsym $MOD+Shift+s layout stacking
+bindsym $MOD+Shift+w layout tabbed
+bindsym $MOD+Shift+e layout toggle split
+bindsym $MOD+Shift+Ctrl+h layout splith
+bindsym $MOD+Shift+Ctrl+v layout splitv
+bindsym $MOD+Shift+Left move left
+bindsym $MOD+Shift+Right move right
 
 # toggle tiling / floating
 bindsym $MOD+f floating toggle
@@ -69,13 +73,13 @@ bindsym $MOD+Ctrl+Left workspace prev
 bindsym $MOD+Ctrl+Right workspace next
 
 # move focused container to workspace
-bindsym $MOD+Shift+1 move container to workspace $WS1
-bindsym $MOD+Shift+2 move container to workspace $WS2
-bindsym $MOD+Shift+3 move container to workspace $WS3
-bindsym $MOD+Shift+4 move container to workspace $WS4
-bindsym $MOD+Shift+5 move container to workspace $WS5
-bindsym $MOD+Shift+Left workspace prev
-bindsym $MOD+Shift+Right workspace next
+bindsym $MOD+Ctrl+Shift+1 move container to workspace $WS1
+bindsym $MOD+Ctrl+Shift+2 move container to workspace $WS2
+bindsym $MOD+Ctrl+Shift+3 move container to workspace $WS3
+bindsym $MOD+Ctrl+Shift+4 move container to workspace $WS4
+bindsym $MOD+Ctrl+Shift+5 move container to workspace $WS5
+bindsym $MOD+Ctrl+Shift+Left workspace prev
+bindsym $MOD+Ctrl+Shift+Right workspace next
 
 ## Application preferences
 assign [class="Thunderbird"] $WS1
@@ -102,7 +106,7 @@ floating_modifier $MOD
 # Terminal
 bindsym $MOD+Return exec i3-sensible-terminal
 # File Browser
-bindsym $MOD+d exec dolphin
+bindsym $MOD+d exec nemo --no-desktop
 # Launcher
 bindsym $MOD+r exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 # Kill windows
