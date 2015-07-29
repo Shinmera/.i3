@@ -45,12 +45,11 @@ bindsym $MOD+Shift+Ctrl+h layout splith
 bindsym $MOD+Shift+Ctrl+v layout splitv
 bindsym $MOD+Shift+Left move left
 bindsym $MOD+Shift+Right move right
+bindsym $MOD+Shift+Up move up
+bindsym $MOD+Shift+Down move down
 
-# toggle tiling / floating
+# Toggle tiling / floating
 bindsym $MOD+f floating toggle
-
-# change focus between tiling / floating windows
-#bindsym $MOD+space focus mode_toggle
 
 ## Workspaces
 # Assign workspaces
