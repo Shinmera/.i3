@@ -17,11 +17,14 @@ set $FF #FFFFFF
 set $UB #FFDD00
 set $UF #FFFFFF
 # Workspaces
+set $WS0 0:main
 set $WS1 1:mail
 set $WS2 2:www
 set $WS3 3:dev
 set $WS4 4:bkg
 set $WS5 5:ext
+set $WS6 6:art
+set $EXT0 ext0
 set $EXT1 ext1
 set $EXT2 ext2
 set $EXT3 ext3
@@ -53,40 +56,47 @@ bindsym $MOD+f floating toggle
 
 ## Workspaces
 # Assign workspaces
-workspace $WS1 output eDP1
-workspace $WS2 output eDP1
-workspace $WS3 output eDP1
-workspace $WS4 output eDP1
-workspace $WS5 output eDP1
+#workspace $WS1
+#workspace $WS2
+#workspace $WS3
+#workspace $WS4
+#workspace $WS5
+workspace $EXT0 output DVI-D-0
 workspace $EXT1 output HDMI1
 workspace $EXT2 output HDMI2
 workspace $EXT3 output DP1
 
 # switch to workspace
+bindsym $MOD+Ctrl+0 workspace $WS0
 bindsym $MOD+Ctrl+1 workspace $WS1
 bindsym $MOD+Ctrl+2 workspace $WS2
 bindsym $MOD+Ctrl+3 workspace $WS3
 bindsym $MOD+Ctrl+4 workspace $WS4
 bindsym $MOD+Ctrl+5 workspace $WS5
+bindsym $MOD+Ctrl+6 workspace $WS6
 bindsym $MOD+Ctrl+Left workspace prev
 bindsym $MOD+Ctrl+Right workspace next
 
 # move focused container to workspace
+bindsym $MOD+Ctrl+Shift+0 move container to workspace $WS0
 bindsym $MOD+Ctrl+Shift+1 move container to workspace $WS1
 bindsym $MOD+Ctrl+Shift+2 move container to workspace $WS2
 bindsym $MOD+Ctrl+Shift+3 move container to workspace $WS3
 bindsym $MOD+Ctrl+Shift+4 move container to workspace $WS4
 bindsym $MOD+Ctrl+Shift+5 move container to workspace $WS5
-bindsym $MOD+Ctrl+Shift+Left workspace prev
-bindsym $MOD+Ctrl+Shift+Right workspace next
+bindsym $MOD+Ctrl+Shift+6 move container to workspace $WS6
+bindsym $MOD+Ctrl+Shift+Left move workspace to output left
+bindsym $MOD+Ctrl+Shift+Right move workspace to output right
 
 ## Application preferences
 assign [class="Thunderbird"] $WS1
 assign [class="Opera"] $WS2
 assign [class="Emacs"] $WS3
-assign [class="pavucontrol"] $WS5
+assign [class="clementine"] $WS5
+assign [class="pavucontrol"] $WS4
 assign [class="smplayer"] $WS5
 assign [class="vmware"] $WS5
+assign [class="MyPaint"] $WS6
 for_window [class="wine"] border none
 
 ## Colors
@@ -119,6 +129,7 @@ bindsym $MOD+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut
 
 ## i3bar
 bar {
+  tray_output primary
   status_command python ~/.config/i3/status.py
   position top
   strip_workspace_numbers yes
