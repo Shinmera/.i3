@@ -1,14 +1,14 @@
 External dependencies: 
 
-* i3-wm
-* i3pystatus-git
-* python-netifaces
-* python-psutil
-* dmenu-xft-mouse-height-fuzzy-history
-* nemo (optional, good file manager)
-* clipit (optional, good clipboard manager)
-* nitrogen (optional, wallpaper)
-* twmn-git (optional, notifications)
+* `i3-wm`
+* `i3pystatus-git`
+* `python-netifaces`
+* `python-psutil`
+* `dmenu-xft-mouse-height-fuzzy-history`
+* `nemo` (optional, good file manager)
+* `clipit` (optional, good clipboard manager)
+* `nitrogen` (optional, wallpaper)
+* `twmn-git` (optional, notifications)
 
 Keyboard shortcuts overview (emacs notation):
 
