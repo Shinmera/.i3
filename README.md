@@ -7,8 +7,8 @@ External dependencies:
 * dmenu-xft-mouse-height-fuzzy-history
 * nemo (optional, good file manager)
 * clipit (optional, good clipboard manager)
-* nitrogen (wallpaper)
-* twmn-git (notifications)
+* nitrogen (optional, wallpaper)
+* twmn-git (optional, notifications)
 
 Keyboard shortcuts overview (emacs notation):
 
