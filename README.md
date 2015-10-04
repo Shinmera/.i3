@@ -3,8 +3,12 @@ Required external dependencies:
 * i3
 * i3pystatus-git
 * python-netifaces
+* python-psutil
 * dmenu-xft-mouse-height-fuzzy-history
-* nemo (optional)
+* nemo (optional, good file manager)
+* clipit (optional, good clipboard manager)
+* nitrogen (wallpaper)
+* twmn-git (notifications)
 
 Keyboard shortcuts overview (emacs notation):
 

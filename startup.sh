@@ -1,13 +1,13 @@
 #!/bin/sh
 
 function start {
-    if hash "$1" 2>/dev/null;; then
-        $1 &
+    if hash "$1" 2>/dev/null; then
+        $@ &
     fi
 }
 
 ## Base executables
-nitrogen --restore
+start nitrogen --restore
 start clipit
 start uim-toolbar-gtk3-systray
 start twmnd
