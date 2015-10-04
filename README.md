@@ -2,6 +2,7 @@ Required external dependencies:
 
 * i3
 * i3pystatus-git
+* python-netifaces
 * dmenu-xft-mouse-height-fuzzy-history
 * nemo (optional)
 
