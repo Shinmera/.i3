@@ -1,6 +1,6 @@
-Required external dependencies: 
+External dependencies: 
 
-* i3
+* i3-wm
 * i3pystatus-git
 * python-netifaces
 * python-psutil
