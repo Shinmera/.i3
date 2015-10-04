@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function start {
-    if ! pgrep "$1" &> /dev/null; then
+    if hash "$1" 2>/dev/null;; then
         $1 &
     fi
 }
@@ -15,7 +15,7 @@ start twmnd
 ## X settings
 xset s off
 xset b off
-fixwacom
+start fixwacom
 
 if [ -f ~/.startuprc ]; then
     source ~/.startuprc
