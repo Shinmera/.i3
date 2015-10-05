@@ -4,6 +4,7 @@ External dependencies:
 * `i3pystatus-git`
 * `python-netifaces`
 * `python-psutil`
+* `python-colour`
 * `dmenu-xft-mouse-height-fuzzy-history`
 * `nemo` (optional, good file manager)
 * `clipit` (optional, good clipboard manager)
