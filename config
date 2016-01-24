@@ -90,8 +90,12 @@ bindsym $MOD+Ctrl+Shift+Right move workspace to output right
 
 ## Application preferences
 assign [class="Thunderbird"] $WS1
+assign [class="Firefox"] $WS2
+assign [class="chromium"] $WS2
+assign [class="chrome"] $WS2
 assign [class="Opera"] $WS2
 assign [class="Emacs"] $WS3
+assign [class="Sublime_text"] $WS3
 assign [class="clementine"] $WS5
 assign [class="pavucontrol"] $WS4
 assign [class="smplayer"] $WS5
