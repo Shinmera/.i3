@@ -28,6 +28,9 @@ set $EXT0 ext0
 set $EXT1 ext1
 set $EXT2 ext2
 set $EXT3 ext3
+# Audio
+set $OUTPUT_SINK 0
+set $INPUT_SINK 1
 
 ## Focus
 bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
@@ -113,10 +116,10 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000
 
 ## Keybindings
 # Media Keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $OUTPUT_SINK toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute $INPUT_SINK toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 bindsym XF86Search exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
