@@ -11,6 +11,7 @@ External dependencies:
 * `nitrogen` (optional, wallpaper)
 * `twmn-git` (optional, notifications)
 * `xbrightness` (optional, brightness media keys)
+* `pulseaudio` (otpional, volume media keys)
 
 Keyboard shortcuts overview (emacs notation):
 
