@@ -10,6 +10,7 @@ External dependencies:
 * `clipit` (optional, good clipboard manager)
 * `nitrogen` (optional, wallpaper)
 * `twmn-git` (optional, notifications)
+* `xbrightness` (optional, brightness media keys)
 
 Keyboard shortcuts overview (emacs notation):
 
