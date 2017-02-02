@@ -35,8 +35,6 @@ for power_supply in os.listdir("/sys/class/power_supply/"):
                         hints={"markup":"pango"})
         break
     type_file.close()
-            break
-    type_file.close()
 
 status.register("mem",
                 format=format_label("MEM","{percent_used_mem:02}%"),
