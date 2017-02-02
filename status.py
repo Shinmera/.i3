@@ -24,23 +24,19 @@ for interface in ['wlp4s0','enp7s0']:
                         hints={"markup":"pango"})
 
 for power_supply in os.listdir("/sys/class/power_supply/"):
-    type_file = open("/sys/class/power_fupply/" + power_supply + "/type", "r")
-
-has_battery = False
-for power_supply in os.listdir("/sys/class/power_supply/"):
     type_file = open("/sys/class/power_supply/" + power_supply + "/type", "r")
-    for line in type_file:
-        if 0 < len(line) and line.startswith("Battery"):
-            has_battery = True
+    if type_file.readline().startswith("Battery"):
+        type_file.close()
+        status.register("battery",
+                        format=format_label("BAT","{percentage:.2f}%{status} {remaining:%E%hh:%Mm} {consumption:.2f}W"),
+                        alert=True,
+                        alert_percentage=5,
+                        status={"DIS":"↓", "CHR":"↑", "FULL":"="},
+                        hints={"markup":"pango"})
+        break
     type_file.close()
-
-if has_battery:
-    status.register("battery",
-                    format=format_label("BAT","{percentage:.2f}%{status} {remaining:%E%hh:%Mm} {consumption:.2f}W"),
-                    alert=True,
-                    alert_percentage=5,
-                    status={"DIS":"↓", "CHR":"↑", "FULL":"="},
-                    hints={"markup":"pango"})
+            break
+    type_file.close()
 
 status.register("mem",
                 format=format_label("MEM","{percent_used_mem:02}%"),
