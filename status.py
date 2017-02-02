@@ -23,7 +23,8 @@ for interface in ['wlp4s0','enp7s0']:
                         color_down="#FF0000",
                         hints={"markup":"pango"})
 
-if os.listdir("/sys/class/power_supply/") != []: 
+power_supply = os.listdir("/sys/class/power_supply/")
+if 1 < len(power_supply) and not (len(power_supply) == 1 and power_supply[0] == "AC"):
     status.register("battery",
                     format=format_label("BAT","{percentage:.2f}%{status} {remaining:%E%hh:%Mm} {consumption:.2f}W"),
                     alert=True,
