@@ -8,7 +8,7 @@
 
 ## Variables
 set $MOD Mod1
-set $FONT Consolas
+set $FONT NotoMono
 # Colors
 set $NB #222222
 set $NF #FFFFFF
@@ -138,7 +138,7 @@ floating_modifier $MOD
 # Terminal
 bindsym $MOD+Return exec i3-sensible-terminal
 # File Browser
-bindsym $MOD+d exec nemo --no-desktop
+bindsym $MOD+d exec nemo
 # Launcher
 bindsym $MOD+r exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 # Kill windows
@@ -152,11 +152,12 @@ bindsym $MOD+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut
 
 ## i3bar
 bar {
+  verbose yes
   tray_output primary
-  status_command python3 ~/.config/i3/status.py
   position top
   strip_workspace_numbers yes
   separator_symbol "•"
+  status_command cari3s
   colors {
     background $NB
     statusline $NF
