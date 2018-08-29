@@ -7,7 +7,7 @@
 ### Author: Nicolas Hafner <shinmera@tymoon.eu>
 
 ## Variables
-set $MOD Mod3
+set $MOD Mod1
 set $FONT NotoMono
 # Colors
 set $NB #222222
@@ -54,6 +54,13 @@ workspace $EXT3 output DP1
 bindsym $MOD+n exec "~/.config/i3/tab_windows.sh"
 
 # switch to workspace
+bindsym $MOD+KP_0 workspace $WS0
+bindsym $MOD+KP_1 workspace $WS1
+bindsym $MOD+KP_2 workspace $WS2
+bindsym $MOD+KP_3 workspace $WS3
+bindsym $MOD+KP_4 workspace $WS4
+bindsym $MOD+KP_5 workspace $WS5
+bindsym $MOD+KP_6 workspace $WS6
 bindsym $MOD+0 workspace $WS0
 bindsym $MOD+1 workspace $WS1
 bindsym $MOD+2 workspace $WS2
@@ -61,10 +68,24 @@ bindsym $MOD+3 workspace $WS3
 bindsym $MOD+4 workspace $WS4
 bindsym $MOD+5 workspace $WS5
 bindsym $MOD+6 workspace $WS6
-bindsym $MOD+PgDn workspace prev
-bindsym $MOD+PgUp workspace next
+bindsym $MOD+asterisk workspace $WS0
+bindsym $MOD+parenleft workspace $WS1
+bindsym $MOD+parenright workspace $WS2
+bindsym $MOD+braceright workspace $WS3
+bindsym $MOD+plus workspace $WS4
+bindsym $MOD+braceleft workspace $WS5
+bindsym $MOD+bracketright workspace $WS6
+bindsym $MOD+Prior workspace prev
+bindsym $MOD+Next workspace next
 
 # move focused container to workspace
+bindsym $MOD+Ctrl+KP_0 move container to workspace $WS0
+bindsym $MOD+Ctrl+KP_1 move container to workspace $WS1
+bindsym $MOD+Ctrl+KP_2 move container to workspace $WS2
+bindsym $MOD+Ctrl+KP_3 move container to workspace $WS3
+bindsym $MOD+Ctrl+KP_4 move container to workspace $WS4
+bindsym $MOD+Ctrl+KP_5 move container to workspace $WS5
+bindsym $MOD+Ctrl+KP_6 move container to workspace $WS6
 bindsym $MOD+Ctrl+0 move container to workspace $WS0
 bindsym $MOD+Ctrl+1 move container to workspace $WS1
 bindsym $MOD+Ctrl+2 move container to workspace $WS2
@@ -72,6 +93,13 @@ bindsym $MOD+Ctrl+3 move container to workspace $WS3
 bindsym $MOD+Ctrl+4 move container to workspace $WS4
 bindsym $MOD+Ctrl+5 move container to workspace $WS5
 bindsym $MOD+Ctrl+6 move container to workspace $WS6
+bindsym $MOD+Ctrl+asterisk move container to workspace $WS0
+bindsym $MOD+Ctrl+parenleft move container to workspace $WS1
+bindsym $MOD+Ctrl+parenright move container to workspace $WS2
+bindsym $MOD+Ctrl+braceright move container to workspace $WS3
+bindsym $MOD+Ctrl+plus move container to workspace $WS4
+bindsym $MOD+Ctrl+braceleft move container to workspace $WS5
+bindsym $MOD+Ctrl+bracketright move container to workspace $WS6
 bindsym $MOD+Ctrl+Left move workspace to output left
 bindsym $MOD+Ctrl+Right move workspace to output right
 
@@ -89,14 +117,14 @@ bindsym $MOD+Up move up
 bindsym $MOD+Down move down
 
 ## Launcher
-bindsym $MOD+t exec i3-sensible-terminal
-bindsym $MOD+n exec nemo
+bindsym $MOD+g exec nemo
+bindsym $MOD+c exec i3-sensible-terminal
 bindsym $MOD+r exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 bindsym $MOD+Escape kill
 
-bindsym Escape+c reload
-bindsym Escape+r restart
-bindsym Escape+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+c reload
+bindsym Mod4+r restart
+bindsym Mod4+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK -5%
