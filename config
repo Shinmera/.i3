@@ -51,8 +51,6 @@ workspace $EXT1 output HDMI1
 workspace $EXT2 output HDMI2
 workspace $EXT3 output DP1
 
-bindsym $MOD+n exec "~/.config/i3/tab_windows.sh"
-
 # switch to workspace
 bindsym $MOD+KP_0 workspace $WS0
 bindsym $MOD+KP_1 workspace $WS1
@@ -100,8 +98,8 @@ bindsym $MOD+Ctrl+braceright move container to workspace $WS3
 bindsym $MOD+Ctrl+plus move container to workspace $WS4
 bindsym $MOD+Ctrl+braceleft move container to workspace $WS5
 bindsym $MOD+Ctrl+bracketright move container to workspace $WS6
-bindsym $MOD+Ctrl+Left move workspace to output left
-bindsym $MOD+Ctrl+Right move workspace to output right
+bindsym $MOD+Ctrl+Prior move workspace to output left
+bindsym $MOD+Ctrl+Next move workspace to output right
 
 ## Layouts
 bindsym $MOD+f floating toggle
@@ -121,6 +119,7 @@ bindsym $MOD+g exec nemo
 bindsym $MOD+c exec i3-sensible-terminal
 bindsym $MOD+r exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 bindsym $MOD+Escape kill
+bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
 
 bindsym Mod4+c reload
 bindsym Mod4+r restart
