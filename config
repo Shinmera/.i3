@@ -66,13 +66,6 @@ bindsym $MOD+3 workspace $WS3
 bindsym $MOD+4 workspace $WS4
 bindsym $MOD+5 workspace $WS5
 bindsym $MOD+6 workspace $WS6
-bindsym $MOD+asterisk workspace $WS0
-bindsym $MOD+parenleft workspace $WS1
-bindsym $MOD+parenright workspace $WS2
-bindsym $MOD+braceright workspace $WS3
-bindsym $MOD+plus workspace $WS4
-bindsym $MOD+braceleft workspace $WS5
-bindsym $MOD+bracketright workspace $WS6
 bindsym $MOD+Prior workspace prev
 bindsym $MOD+Next workspace next
 
@@ -91,19 +84,14 @@ bindsym $MOD+Ctrl+3 move container to workspace $WS3
 bindsym $MOD+Ctrl+4 move container to workspace $WS4
 bindsym $MOD+Ctrl+5 move container to workspace $WS5
 bindsym $MOD+Ctrl+6 move container to workspace $WS6
-bindsym $MOD+Ctrl+asterisk move container to workspace $WS0
-bindsym $MOD+Ctrl+parenleft move container to workspace $WS1
-bindsym $MOD+Ctrl+parenright move container to workspace $WS2
-bindsym $MOD+Ctrl+braceright move container to workspace $WS3
-bindsym $MOD+Ctrl+plus move container to workspace $WS4
-bindsym $MOD+Ctrl+braceleft move container to workspace $WS5
-bindsym $MOD+Ctrl+bracketright move container to workspace $WS6
-bindsym $MOD+Ctrl+Prior move workspace to output left
-bindsym $MOD+Ctrl+Next move workspace to output right
+bindsym $MOD+Ctrl+Prior move container to workspace prev
+bindsym $MOD+Ctrl+Next move container to workspace next
+bindsym $MOD+Shift+Prior move workspace to output left
+bindsym $MOD+Shift+Next move workspace to output right
 
 ## Layouts
 bindsym $MOD+f floating toggle
-bindsym $MOD+Ctrl+f fullscreen toggle
+bindsym $MOD+F11 fullscreen toggle
 bindsym $MOD+h split h
 bindsym $MOD+v split v
 bindsym $MOD+Ctrl+h layout splith
