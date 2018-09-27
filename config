@@ -108,8 +108,8 @@ bindsym $MOD+c exec i3-sensible-terminal
 bindsym $MOD+r exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 bindsym $MOD+Escape kill
 bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
-
-bindsym $MOD+Ctrl+c reload
+bindsym Menu exec switch-keyboard-layout
+Bindsym $MOD+Ctrl+c reload
 bindsym $MOD+Ctrl+r restart
 bindsym $MOD+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
