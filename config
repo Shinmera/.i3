@@ -42,7 +42,7 @@ font pango:$FONT 10
 
 ## Focus
 focus_follows_mouse no
-floating_modifier Mod1
+floating_modifier $MOD
 workspace_auto_back_and_forth yes
 
 ## Workspaces
@@ -66,6 +66,8 @@ bindsym $MOD+3 workspace $WS3
 bindsym $MOD+4 workspace $WS4
 bindsym $MOD+5 workspace $WS5
 bindsym $MOD+6 workspace $WS6
+bindsym $MOD+p workspace prev
+bindsym $MOD+n workspace next
 bindsym $MOD+Prior workspace prev
 bindsym $MOD+Next workspace next
 
@@ -84,6 +86,10 @@ bindsym $MOD+Ctrl+3 move container to workspace $WS3
 bindsym $MOD+Ctrl+4 move container to workspace $WS4
 bindsym $MOD+Ctrl+5 move container to workspace $WS5
 bindsym $MOD+Ctrl+6 move container to workspace $WS6
+bindsym $MOD+Ctrl+p move container to workspace prev
+bindsym $MOD+Ctrl+n move container to workspace next
+bindsym $MOD+Shift+p move workspace to output left
+bindsym $MOD+Shift+n move workspace to output right
 bindsym $MOD+Ctrl+Prior move container to workspace prev
 bindsym $MOD+Ctrl+Next move container to workspace next
 bindsym $MOD+Shift+Prior move workspace to output left
