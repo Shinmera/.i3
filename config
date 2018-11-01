@@ -8,7 +8,7 @@
 
 ## Variables
 set $MOD Mod4
-set $FONT NotoMono
+set $FONT Noto Sans Mono
 # Colors
 set $NB #222222
 set $NF #FFFFFF
