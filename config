@@ -111,7 +111,7 @@ bindsym $MOD+Down move down
 ## Launcher
 bindsym $MOD+g exec nemo
 bindsym $MOD+c exec i3-sensible-terminal
-bindsym $MOD+r exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
+bindsym $MOD+r exec rofi -config "~/.config/i3/rofi.conf" -show combi
 bindsym $MOD+Escape kill
 bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
 bindsym Menu exec switch-keyboard-layout
