@@ -88,6 +88,8 @@ bindsym $MOD+Ctrl+5 move container to workspace $WS5
 bindsym $MOD+Ctrl+6 move container to workspace $WS6
 bindsym $MOD+Ctrl+p move container to workspace prev
 bindsym $MOD+Ctrl+n move container to workspace next
+bindsym $MOD+Shift+u move workspace to output up
+bindsym $MOD+Shift+d move workspace to output down
 bindsym $MOD+Shift+p move workspace to output left
 bindsym $MOD+Shift+n move workspace to output right
 bindsym $MOD+Ctrl+Prior move container to workspace prev
