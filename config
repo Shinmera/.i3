@@ -149,7 +149,7 @@ assign [class="vmware"] $WS5
 assign [class="MyPaint"] $WS6
 assign [class="krita"] $WS6
 assign [class="Aseprite"] $WS6
-for_window [class="Kandria"] floating enable
+for_window [class="trial"] floating enable
 for_window [class="wine"] border none
 
 bar {
