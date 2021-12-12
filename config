@@ -153,6 +153,7 @@ assign [class="Aseprite"] $WS6
 for_window [class="trial"] floating enable
 for_window [class="wine"] border none
 for_window [class="Emacs"] border none
+for_window [class="zoom"] floating enable
 
 bar {
   verbose yes
