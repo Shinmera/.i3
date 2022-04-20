@@ -24,6 +24,7 @@ set $WS3 3:dev
 set $WS4 4:bkg
 set $WS5 5:ext
 set $WS6 6:art
+set $WS7 7:mus
 set $EXT0 ext0
 set $EXT1 ext1
 set $EXT2 ext2
@@ -66,6 +67,7 @@ bindsym $MOD+3 workspace $WS3
 bindsym $MOD+4 workspace $WS4
 bindsym $MOD+5 workspace $WS5
 bindsym $MOD+6 workspace $WS6
+bindsym $MOD+7 workspace $WS7
 bindsym $MOD+p workspace prev
 bindsym $MOD+n workspace next
 bindsym $MOD+Prior workspace prev
@@ -79,6 +81,7 @@ bindsym $MOD+Ctrl+KP_3 move container to workspace $WS3
 bindsym $MOD+Ctrl+KP_4 move container to workspace $WS4
 bindsym $MOD+Ctrl+KP_5 move container to workspace $WS5
 bindsym $MOD+Ctrl+KP_6 move container to workspace $WS6
+bindsym $MOD+Ctrl+KP_7 move container to workspace $WS7
 bindsym $MOD+Ctrl+0 move container to workspace $WS0
 bindsym $MOD+Ctrl+1 move container to workspace $WS1
 bindsym $MOD+Ctrl+2 move container to workspace $WS2
@@ -86,6 +89,7 @@ bindsym $MOD+Ctrl+3 move container to workspace $WS3
 bindsym $MOD+Ctrl+4 move container to workspace $WS4
 bindsym $MOD+Ctrl+5 move container to workspace $WS5
 bindsym $MOD+Ctrl+6 move container to workspace $WS6
+bindsym $MOD+Ctrl+7 move container to workspace $WS7
 bindsym $MOD+Ctrl+p move container to workspace prev
 bindsym $MOD+Ctrl+n move container to workspace next
 bindsym $MOD+Shift+u move workspace to output up
@@ -141,15 +145,17 @@ assign [class="Vivaldi"] $WS2
 assign [class="Opera"] $WS2
 assign [class="Emacs"] $WS3
 assign [class="Sublime_text"] $WS3
-assign [class="clementine"] $WS4
-assign [class="spotify"] $WS4
+assign [class="clementine"] $WS7
+assign [class="spotify"] $WS7
 assign [class="pavucontrol"] $WS4
 assign [class="smplayer"] $WS5
 assign [class="vlc"] $WS5
 assign [class="vmware"] $WS5
 assign [class="MyPaint"] $WS6
 assign [class="krita"] $WS6
+assign [class="blender"] $WS6
 assign [class="Aseprite"] $WS6
+assign [class="Blender"] $WS6
 for_window [class="trial"] floating enable
 for_window [class="wine"] border none
 for_window [class="Emacs"] border none
