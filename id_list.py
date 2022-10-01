@@ -12,7 +12,7 @@ def run(cmd):
 def parse_i3_output(output_list):
     output_string = ""
     for line in output_list:
-        output_string += line
+        output_string = output_string+line.decode("utf-8")
     return json.loads(output_string)
 
 def i3_msg(t, m=""):
@@ -22,7 +22,7 @@ def equal(a,b):
     return a == b
 
 def check(d, k, v, cmp=equal):
-    return (d.has_key(k) and cmp(d[k], v))
+    return (k in d and cmp(d[k], v))
 
 def traverse_nodes(d, func):
     if(check(d, "nodes", list, isinstance)):
@@ -71,6 +71,6 @@ def main():
     if (index >= len(windows)):
         index = 0
         
-    print windows[index]["window"]
+    print((windows[index]["window"]))
 
 main()

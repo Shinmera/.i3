@@ -145,8 +145,8 @@ assign [class="Vivaldi"] $WS2
 assign [class="Opera"] $WS2
 assign [class="Emacs"] $WS3
 assign [class="Sublime_text"] $WS3
-assign [class="clementine"] $WS7
-assign [class="spotify"] $WS7
+assign [class="Clementine"] $WS7
+assign [class="Spotify"] $WS7
 assign [class="pavucontrol"] $WS4
 assign [class="smplayer"] $WS5
 assign [class="vlc"] $WS5
@@ -160,6 +160,7 @@ for_window [class="trial"] floating enable
 for_window [class="wine"] border none
 for_window [class="Emacs"] border none
 for_window [class="Aseprite"] border none
+for_window [class="Vivaldi-stable"] border none
 for_window [class="zoom"] floating enable
 
 bar {
