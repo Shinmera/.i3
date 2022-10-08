@@ -162,6 +162,7 @@ for_window [class="Emacs"] border none
 for_window [class="Aseprite"] border none
 for_window [class="Vivaldi-stable"] border none
 for_window [class="zoom"] floating enable
+for_window [class="Steam"] floating enable, border none
 
 bar {
   verbose yes
