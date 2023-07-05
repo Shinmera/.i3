@@ -8,7 +8,6 @@ function start {
 
 ## Base executables
 start nitrogen --restore
-start uim-toolbar-gtk3-systray
 start twmnd
 start greenclip daemon
 
