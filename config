@@ -116,7 +116,7 @@ bindsym $MOD+Down move down
 
 ## Launcher
 bindsym $MOD+g exec nemo
-bindsym $MOD+c exec i3-sensible-terminal
+bindsym $MOD+c exec alacritty
 bindsym $MOD+r exec rofi -config "~/.config/i3/rofi.conf" -show combi
 bindsym $MOD+l exec ROFI_PASS_CONFIG=~/.config/i3/rofi-pass.conf rofi-pass
 bindsym Shift+Ctrl+v exec rofi -config "~/.config/i3/rofi.conf" -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
