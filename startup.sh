@@ -8,14 +8,12 @@ function start {
 
 ## Base executables
 start nitrogen --restore
-start twmnd
 start greenclip daemon
 start polybar --config=$HOME/.config/i3/polybar.ini
 
 ## X settings
 xset s off
 xset b off
-start fixwacom
 
 if [ -f ~/.startuprc ]; then
     source ~/.startuprc

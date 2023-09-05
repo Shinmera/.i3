@@ -136,7 +136,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 bindsym XF86Search exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 
 ## Application preferences
-assign [class="Thunderbird"] $WS1
+assign [class="thunderbird"] $WS1
 assign [class="Firefox"] $WS2
 assign [class="chromium"] $WS2
 assign [class="chrome"] $WS2
