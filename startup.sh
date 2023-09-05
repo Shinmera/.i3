@@ -10,6 +10,7 @@ function start {
 start nitrogen --restore
 start twmnd
 start greenclip daemon
+start polybar --config=$XDG_CONFIG_HOME/i3/polybar.ini
 
 ## X settings
 xset s off

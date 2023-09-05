@@ -165,23 +165,5 @@ for_window [class="Vivaldi-stable"] border none
 for_window [class="zoom"] floating enable
 for_window [class="Steam"] floating enable, border none
 
-bar {
-  verbose yes
-  tray_output primary
-  position top
-  strip_workspace_numbers yes
-  separator_symbol "•"
-  status_command cari3s
-  colors {
-    background $NB
-    statusline $NF
-    separator $FB
-    focused_workspace  $FB $FB $FF
-    active_workspace   $NB $NB $NF
-    inactive_workspace $NB $NB $NF
-    urgent_workspace   $UB $UB $UF
-  }
-}
-
 ## Startup
 exec --no-startup-id bash ~/.config/i3/startup.sh
