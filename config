@@ -17,14 +17,14 @@ set $FF #FFFFFF
 set $UB #FFDD00
 set $UF #FFFFFF
 # Workspaces
-set $WS0 0:main
-set $WS1 1:mail
-set $WS2 2:www
-set $WS3 3:dev
-set $WS4 4:bkg
-set $WS5 5:ext
-set $WS6 6:art
-set $WS7 7:mus
+set $MAIN 0:main
+set $MAIL 1:mail
+set $WWW 2:www
+set $DEV 3:dev
+set $BKG 4:bkg
+set $EXT 5:ext
+set $MUS 6:mus
+set $ART 7:art
 set $EXT0 ext0
 set $EXT1 ext1
 set $EXT2 ext2
@@ -53,43 +53,43 @@ workspace $EXT2 output HDMI2
 workspace $EXT3 output DP1
 
 # switch to workspace
-bindsym $MOD+KP_0 workspace $WS0
-bindsym $MOD+KP_1 workspace $WS1
-bindsym $MOD+KP_2 workspace $WS2
-bindsym $MOD+KP_3 workspace $WS3
-bindsym $MOD+KP_4 workspace $WS4
-bindsym $MOD+KP_5 workspace $WS5
-bindsym $MOD+KP_6 workspace $WS6
-bindsym $MOD+0 workspace $WS0
-bindsym $MOD+1 workspace $WS1
-bindsym $MOD+2 workspace $WS2
-bindsym $MOD+3 workspace $WS3
-bindsym $MOD+4 workspace $WS4
-bindsym $MOD+5 workspace $WS5
-bindsym $MOD+6 workspace $WS6
-bindsym $MOD+7 workspace $WS7
+bindsym $MOD+KP_0 workspace $MAIN
+bindsym $MOD+KP_1 workspace $MAIL
+bindsym $MOD+KP_2 workspace $WWW
+bindsym $MOD+KP_3 workspace $DEV
+bindsym $MOD+KP_4 workspace $BKG
+bindsym $MOD+KP_5 workspace $EXT
+bindsym $MOD+KP_6 workspace $ART
+bindsym $MOD+0 workspace $MAIN
+bindsym $MOD+1 workspace $MAIL
+bindsym $MOD+2 workspace $WWW
+bindsym $MOD+3 workspace $DEV
+bindsym $MOD+4 workspace $BKG
+bindsym $MOD+5 workspace $EXT
+bindsym $MOD+6 workspace $ART
+bindsym $MOD+7 workspace $MUS
 bindsym $MOD+p workspace prev
 bindsym $MOD+n workspace next
 bindsym $MOD+Prior workspace prev
 bindsym $MOD+Next workspace next
 
 # move focused container to workspace
-bindsym $MOD+Ctrl+KP_0 move container to workspace $WS0
-bindsym $MOD+Ctrl+KP_1 move container to workspace $WS1
-bindsym $MOD+Ctrl+KP_2 move container to workspace $WS2
-bindsym $MOD+Ctrl+KP_3 move container to workspace $WS3
-bindsym $MOD+Ctrl+KP_4 move container to workspace $WS4
-bindsym $MOD+Ctrl+KP_5 move container to workspace $WS5
-bindsym $MOD+Ctrl+KP_6 move container to workspace $WS6
-bindsym $MOD+Ctrl+KP_7 move container to workspace $WS7
-bindsym $MOD+Ctrl+0 move container to workspace $WS0
-bindsym $MOD+Ctrl+1 move container to workspace $WS1
-bindsym $MOD+Ctrl+2 move container to workspace $WS2
-bindsym $MOD+Ctrl+3 move container to workspace $WS3
-bindsym $MOD+Ctrl+4 move container to workspace $WS4
-bindsym $MOD+Ctrl+5 move container to workspace $WS5
-bindsym $MOD+Ctrl+6 move container to workspace $WS6
-bindsym $MOD+Ctrl+7 move container to workspace $WS7
+bindsym $MOD+Ctrl+KP_0 move container to workspace $MAIN
+bindsym $MOD+Ctrl+KP_1 move container to workspace $MAIL
+bindsym $MOD+Ctrl+KP_2 move container to workspace $WWW
+bindsym $MOD+Ctrl+KP_3 move container to workspace $DEV
+bindsym $MOD+Ctrl+KP_4 move container to workspace $BKG
+bindsym $MOD+Ctrl+KP_5 move container to workspace $EXT
+bindsym $MOD+Ctrl+KP_6 move container to workspace $ART
+bindsym $MOD+Ctrl+KP_7 move container to workspace $MUS
+bindsym $MOD+Ctrl+0 move container to workspace $MAIN
+bindsym $MOD+Ctrl+1 move container to workspace $MAIL
+bindsym $MOD+Ctrl+2 move container to workspace $WWW
+bindsym $MOD+Ctrl+3 move container to workspace $DEV
+bindsym $MOD+Ctrl+4 move container to workspace $BKG
+bindsym $MOD+Ctrl+5 move container to workspace $EXT
+bindsym $MOD+Ctrl+6 move container to workspace $ART
+bindsym $MOD+Ctrl+7 move container to workspace $MUS
 bindsym $MOD+Ctrl+p move container to workspace prev
 bindsym $MOD+Ctrl+n move container to workspace next
 bindsym $MOD+Shift+u move workspace to output up
@@ -127,36 +127,38 @@ Bindsym $MOD+Ctrl+c reload
 bindsym $MOD+Ctrl+r restart
 bindsym $MOD+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym Print exec --no-startup-id maim -s -u "/home/linus/$(date '+%Y.%m.%d %H:%M:%S').png"
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $OUTPUT_SINK toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute $INPUT_SINK toggle
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
-bindsym XF86Search exec dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
+bindsym XF86Search exec --no-startup-id dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 
 ## Application preferences
-assign [class="thunderbird"] $WS1
-assign [class="Firefox"] $WS2
-assign [class="chromium"] $WS2
-assign [class="chrome"] $WS2
-assign [class="Vivaldi-snapshot"] $WS2
-assign [class="Vivaldi-stable"] $WS2
-assign [class="Vivaldi"] $WS2
-assign [class="Opera"] $WS2
-assign [class="Emacs"] $WS3
-assign [class="Sublime_text"] $WS3
-assign [class="Clementine"] $WS7
-assign [class="Spotify"] $WS7
-assign [class="pavucontrol"] $WS4
-assign [class="smplayer"] $WS5
-assign [class="vlc"] $WS5
-assign [class="vmware"] $WS5
-assign [class="MyPaint"] $WS6
-assign [class="krita"] $WS6
-assign [class="blender"] $WS6
-assign [class="Aseprite"] $WS6
-assign [class="Blender"] $WS6
+assign [class="thunderbird"] $MAIL
+assign [class="Firefox"] $WWW
+assign [class="chromium"] $WWW
+assign [class="chrome"] $WWW
+assign [class="Vivaldi-snapshot"] $WWW
+assign [class="Vivaldi-stable"] $WWW
+assign [class="Vivaldi"] $WWW
+assign [class="Opera"] $WWW
+assign [class="Emacs"] $DEV
+assign [class="Sublime_text"] $DEV
+assign [class="Clementine"] $MUS
+assign [class="strawberry"] $MUS
+assign [class="Spotify"] $MUS
+assign [class="pavucontrol"] $BKG
+assign [class="smplayer"] $EXT
+assign [class="vlc"] $EXT
+assign [class="vmware"] $EXT
+assign [class="MyPaint"] $ART
+assign [class="krita"] $ART
+assign [class="blender"] $ART
+assign [class="Aseprite"] $ART
+assign [class="Blender"] $ART
 for_window [class="trial"] floating enable
 for_window [class="wine"] border none
 for_window [class="Emacs"] border none
