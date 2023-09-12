@@ -119,9 +119,10 @@ bindsym $MOD+g exec nemo
 bindsym $MOD+c exec alacritty
 bindsym $MOD+r exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -show combi
 bindsym $MOD+l exec ROFI_PASS_CONFIG=~/.config/i3/rofi-pass.conf rofi-pass
-bindsym Shift+Ctrl+v exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $MOD+v exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $MOD+Escape kill
 bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
+bindsym Shift+Ctrl+v exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym Menu exec switch-keyboard-layout
 Bindsym $MOD+Ctrl+c reload
 bindsym $MOD+Ctrl+r restart
