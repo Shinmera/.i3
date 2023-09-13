@@ -9,7 +9,10 @@ function start {
 ## Base executables
 start nitrogen --restore
 start greenclip daemon
-start polybar --config=$HOME/.config/i3/polybar.ini
+
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar --config=$HOME/.config/i3/polybar.ini &
+done
 
 ## X settings
 xset s off
