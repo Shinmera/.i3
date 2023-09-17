@@ -29,9 +29,6 @@ set $EXT0 ext0
 set $EXT1 ext1
 set $EXT2 ext2
 set $EXT3 ext3
-# Audio
-set $OUTPUT_SINK 0
-set $INPUT_SINK 1
 
 # class                 border background text indicator
 client.focused          $FB $FB $FF #2e9ef4
@@ -128,10 +125,10 @@ bindsym $MOD+Ctrl+r restart
 bindsym $MOD+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym Print exec --no-startup-id maim -s -u "/home/linus/$(date '+%Y.%m.%d %H:%M:%S').png"
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $OUTPUT_SINK -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $OUTPUT_SINK toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute $INPUT_SINK toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pactl get-default-sink) +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pactl get-default-sink) -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pactl get-default-sink) toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute $(pactl get-default-source) toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 bindsym XF86Search exec --no-startup-id dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
