@@ -42,7 +42,6 @@ get_icon() {
 }
 
 KEY="$OPENWEATHERMAP_KEY"
-CITY="Zurich"
 UNITS="metric"
 SYMBOL="°C"
 
