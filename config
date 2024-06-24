@@ -103,6 +103,7 @@ bindsym $MOD+f floating toggle
 bindsym $MOD+F11 fullscreen toggle
 bindsym $MOD+h split h
 bindsym $MOD+v split v
+bindsim $MOD+t layout tabbed
 bindsym $MOD+Ctrl+h layout splith
 bindsym $MOD+Ctrl+v layout splitv
 bindsym $MOD+e layout toggle split
