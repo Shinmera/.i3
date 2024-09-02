@@ -114,7 +114,7 @@ bindsym $MOD+Down move down
 
 ## Launcher
 bindsym $MOD+g exec xdg-open "$HOME"
-bindsym $MOD+c exec alacritty
+bindsym $MOD+c exec "$TERMINAL"
 bindsym $MOD+r exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -show combi
 bindsym $MOD+l exec ROFI_PASS_CONFIG=~/.config/i3/rofi-pass.conf rofi-pass
 bindsym $MOD+Escape kill
