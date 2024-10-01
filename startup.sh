@@ -11,8 +11,10 @@ start nitrogen --restore
 start greenclip daemon
 start picom
 
-for m in $(polybar --list-monitors | cut -d":" -f1); do
-    MONITOR=$m polybar --config=$HOME/.config/i3/polybar.ini &
+polybar --list-monitors | while IFS=$'\n' read line; do
+  monitor=$(echo $line | cut -d':' -f1)
+  primary=$(echo $line | cut -d' ' -f3)
+  MONITOR=$monitor polybar --config=$HOME/.config/i3/polybar.ini --reload "top${primary:+"-primary"}" &
 done
 
 ## X settings
