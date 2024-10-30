@@ -161,6 +161,7 @@ for_window [class="wine"] border none
 for_window [class="Emacs"] border none
 for_window [class="Aseprite"] border none
 for_window [class="Vivaldi-stable"] border none
+for_window [class="wezterm"] border none
 for_window [class="zoom"] floating enable
 for_window [class="Steam"] floating enable, border none
 for_window [class="helvum"] floating enable
