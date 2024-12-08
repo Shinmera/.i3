@@ -10,6 +10,7 @@ function start {
 start nitrogen --restore
 start greenclip daemon
 start picom
+start dunst -conf "$HOME/.config/i3/dust.conf"
 
 polybar --list-monitors | while IFS=$'\n' read line; do
   monitor=$(echo $line | cut -d':' -f1)
