@@ -2,7 +2,7 @@
 
 function start {
     if hash "$1" 2>/dev/null; then
-        $@ &
+        $1 "${@:2}" &
     fi
 }
 
