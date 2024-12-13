@@ -2,7 +2,7 @@
 
 function start {
     if hash "$1" 2>/dev/null; then
-        $@ &
+        $1 "${@:2}" &
     fi
 }
 
@@ -10,7 +10,6 @@ function start {
 start nitrogen --restore
 start greenclip daemon
 start picom
-start dunst -conf "$HOME/.config/i3/dust.conf"
 
 polybar --list-monitors | while IFS=$'\n' read line; do
   monitor=$(echo $line | cut -d':' -f1)
