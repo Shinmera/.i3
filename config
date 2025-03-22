@@ -146,6 +146,7 @@ assign [class="Opera"] $WWW
 assign [class="Emacs"] $DEV
 assign [class="Sublime_text"] $DEV
 assign [class="Clementine"] $MUS
+assign [class="elisa"] $MUS
 assign [class="strawberry"] $MUS
 assign [class="Spotify"] $MUS
 assign [class="smplayer"] $EXT
