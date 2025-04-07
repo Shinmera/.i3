@@ -106,7 +106,7 @@ bindsym $MOD+v split v
 bindsim $MOD+t layout tabbed
 bindsym $MOD+Ctrl+h layout splith
 bindsym $MOD+Ctrl+v layout splitv
-bindsym $MOD+e layout toggle split
+#bindsym $MOD+e layout toggle split
 bindsym $MOD+Left move left
 bindsym $MOD+Right move right
 bindsym $MOD+Up move up
@@ -117,6 +117,7 @@ bindsym $MOD+g exec xdg-open "$HOME"
 bindsym $MOD+c exec "$TERMINAL"
 bindsym $MOD+r exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -show combi
 bindsym $MOD+l exec ROFI_PASS_CONFIG=~/.config/i3/rofi-pass.conf rofi-pass
+bindsym $MOD+e exec rofimoji -a clipboard --selector-args '-dpi "$DPI" -config "/home/linus/.config/i3/rofi.conf"'
 bindsym $MOD+Escape kill
 bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
 bindsym Shift+Ctrl+v exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
