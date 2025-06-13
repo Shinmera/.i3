@@ -50,45 +50,26 @@ workspace $EXT2 output HDMI2
 workspace $EXT3 output DP1
 
 # switch to workspace
-bindsym $MOD+KP_0 workspace $MAIN
-bindsym $MOD+KP_1 workspace $MAIL
-bindsym $MOD+KP_2 workspace $WWW
-bindsym $MOD+KP_3 workspace $DEV
-bindsym $MOD+KP_4 workspace $BKG
-bindsym $MOD+KP_5 workspace $EXT
-bindsym $MOD+KP_6 workspace $ART
-bindsym $MOD+0 workspace $MAIN
-bindsym $MOD+1 workspace $MAIL
-bindsym $MOD+2 workspace $WWW
-bindsym $MOD+3 workspace $DEV
-bindsym $MOD+4 workspace $BKG
-bindsym $MOD+5 workspace $EXT
-bindsym $MOD+6 workspace $ART
-bindsym $MOD+7 workspace $MUS
 bindsym $MOD+p workspace prev
 bindsym $MOD+n workspace next
+bindsym $MOD+0 workspace $MAIN
+bindsym $MOD+m workspace $MAIL
+bindsym $MOD+w workspace $WWW
+bindsym $MOD+d workspace $DEV
+bindsym $MOD+b workspace $BKG
+bindsym $MOD+a workspace $ART
 bindsym $MOD+Prior workspace prev
 bindsym $MOD+Next workspace next
 
 # move focused container to workspace
-bindsym $MOD+Ctrl+KP_0 move container to workspace $MAIN
-bindsym $MOD+Ctrl+KP_1 move container to workspace $MAIL
-bindsym $MOD+Ctrl+KP_2 move container to workspace $WWW
-bindsym $MOD+Ctrl+KP_3 move container to workspace $DEV
-bindsym $MOD+Ctrl+KP_4 move container to workspace $BKG
-bindsym $MOD+Ctrl+KP_5 move container to workspace $EXT
-bindsym $MOD+Ctrl+KP_6 move container to workspace $ART
-bindsym $MOD+Ctrl+KP_7 move container to workspace $MUS
-bindsym $MOD+Ctrl+0 move container to workspace $MAIN
-bindsym $MOD+Ctrl+1 move container to workspace $MAIL
-bindsym $MOD+Ctrl+2 move container to workspace $WWW
-bindsym $MOD+Ctrl+3 move container to workspace $DEV
-bindsym $MOD+Ctrl+4 move container to workspace $BKG
-bindsym $MOD+Ctrl+5 move container to workspace $EXT
-bindsym $MOD+Ctrl+6 move container to workspace $ART
-bindsym $MOD+Ctrl+7 move container to workspace $MUS
 bindsym $MOD+Ctrl+p move container to workspace prev
 bindsym $MOD+Ctrl+n move container to workspace next
+bindsym $MOD+Ctrl+0 move container to workspace $MAIN
+bindsym $MOD+Ctrl+m move container to workspace $MAIL
+bindsym $MOD+Ctrl+w move container to workspace $WWW
+bindsym $MOD+Ctrl+d move container to workspace $DEV
+bindsym $MOD+Ctrl+b move container to workspace $BKG
+bindsym $MOD+Ctrl+a move container to workspace $ART
 bindsym $MOD+Shift+u move workspace to output up
 bindsym $MOD+Shift+d move workspace to output down
 bindsym $MOD+Shift+p move workspace to output left
@@ -106,7 +87,6 @@ bindsym $MOD+v split v
 bindsim $MOD+t layout tabbed
 bindsym $MOD+Ctrl+h layout splith
 bindsym $MOD+Ctrl+v layout splitv
-#bindsym $MOD+e layout toggle split
 bindsym $MOD+Left move left
 bindsym $MOD+Right move right
 bindsym $MOD+Up move up
