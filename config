@@ -84,7 +84,7 @@ bindsym $MOD+f floating toggle
 bindsym $MOD+F11 fullscreen toggle
 bindsym $MOD+h split h
 bindsym $MOD+v split v
-bindsim $MOD+t layout tabbed
+bindsym $MOD+t layout tabbed
 bindsym $MOD+Ctrl+h layout splith
 bindsym $MOD+Ctrl+v layout splitv
 bindsym $MOD+Left move left
@@ -101,7 +101,6 @@ bindsym $MOD+e exec rofimoji -a clipboard --selector-args '-dpi "$DPI" -config "
 bindsym $MOD+Escape kill
 bindsym $MOD+Tab exec "~/.config/i3/tab_windows.sh"
 bindsym Shift+Ctrl+v exec rofi -dpi "$DPI" -config "~/.config/i3/rofi.conf" -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-bindsym Menu exec switch-keyboard-layout
 Bindsym $MOD+Ctrl+c reload
 bindsym $MOD+Ctrl+r restart
 bindsym $MOD+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -113,7 +112,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pactl get-defau
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute $(pactl get-default-source) toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
-bindsym XF86Search exec --no-startup-id dmenu_run -i -nb "$NB" -nf "$NF" -sb "$FB" -sf "$FF" -fn "$FONT-10" -h 18
 
 ## Application preferences
 assign [class="thunderbird"] $MAIL
